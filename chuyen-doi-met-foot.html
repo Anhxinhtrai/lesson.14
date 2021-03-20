@@ -2,25 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>chuyển đổi giữa meter và feet</title>
+    <title>Chuyển đổi MET - FEET</title>
 </head>
 <body>
-<input type="number" id="input">
-<button onclick="footToMeter()">Foot to Meter</button>
-<button onclick="meterToFoot()">Meter to Foot</button>
-<p>Kết quả: <span id="result">0</span></p>
-<script>
-    function meterToFoot() {
-        let feet = document.getElementById('input').value;
-        let meter = 0.305 * feet;
-        document.getElementById('result').innerHTML = meter.toFixed(3);
-    }
-    function footToMeter(){
-        let meter = document.getElementById('input').value;
-        let feet = 3.279 * meter;
-        document.getElementById('result').innerHTML = feet.toFixed(3);
-    }
-
-</script>
+<input type="number" id="chieu-dai" oninput="convert()">
+<select id="from">
+    <option value="0.305">MET</option>
+    <option value="1">FEET</option>
+</select>
+<select id="to">
+    <option value="0.305">MET</option>
+    <option value="1">FEET</option>
+</select>
+<p id="ket-qua"></p>
 </body>
+<script>
+    function convert() {
+        let dai = document.getElementById('chieu-dai').value;
+        let from  = document.getElementById('from').value;
+        let to  = document.getElementById('to').value;
+        if(dai < 0){
+            alert("Số chiều dài phải lớn hơn 0")
+        }else{
+            let result =  dai * to/from;
+            document.getElementById('ket-qua').innerText = result.toFixed(3);
+        }
+    }
+</script>
 </html>

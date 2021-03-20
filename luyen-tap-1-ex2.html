@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập tạo và sử dụng hàm</title>
+</head>
+<body>
+<input type="number" id="num" oninput="add()">
+<p>result <span id="result">0</span></p>
+<script>
+    function add( value) {
+        value = document.getElementById('num').value;
+        value++;
+        document.getElementById('result').innerHTML = value;
+    }
+</script>
+</body>
+</html>

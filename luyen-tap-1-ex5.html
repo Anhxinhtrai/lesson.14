@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let search = prompt('nhập ngôi sao cần tìm:')
+    timSao();
+
+    function timSao() {
+        for (let i = 0; i < star.length; i++) {
+            if (search === star[i]) {
+                alert("Ngôi sao " + search + " nằm ở chòm sao " + chomSao[i]);
+                break;
+            } else {
+                alert("không tìm thấy ngôi sao bạn vừa nhập");
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
