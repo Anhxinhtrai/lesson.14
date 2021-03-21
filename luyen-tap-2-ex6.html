@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên dương - âm</title>
+</head>
+<body>
+<script>
+
+    function check(a = +prompt("nhập số cần kiểm tra")){
+        if ( Number.isInteger(a) && a > 0) {
+        alert("số " +a+  " là một số nguyên")
+        } else if (a < 0){
+            alert("số " +a+ " không lớn hơn 0")
+        }else {
+            alert("số " +a+ " không phải số nguyên")
+        }
+    }
+    check();
+</script>
+</body>
+</html>

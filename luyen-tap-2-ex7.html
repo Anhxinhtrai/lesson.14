@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>truyền vào 2 số nguyên sau đó đổi chỗ 2 số đó</title>
+</head>
+<body>
+<script>
+    let a = +prompt("số nguyên thứ nhất là:");
+    let b = +prompt("số nguyên thứ hai là:");
+    let c = a + b;
+    if (Number.isInteger(c)) {
+        function doiCho() {
+            let temp = a;
+            a = b;
+            b = temp;
+            document.write("bây giờ <br> số thứ nhất là: " + a + "<br> số thứ hai là:" + b)
+        }
+    } else {
+        alert("hãy nhập số nguyên")
+    }
+    doiCho();
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>truyền vào mảng và đảo ngược</title>
+</head>
+<body>
+<label for="add">Nhập giá trị cần thêm vào mảng:</label>
+<input type="text" id="add">
+<button onclick="add()">Thêm</button>
+<button onclick="reverse()">Xem và Đảo ngược <mảng></mảng></button>
+<p id="history"></p>
+<p id="display"></p>
+<script>
+    let a = [];
+
+    function add() {
+        let x = document.getElementById("add").value;
+        a.push(x);
+        document.getElementById("history").innerHTML = "bạn vừa thêm giá trị '" + x + "' vào vị trí [" + (a.length-1)+ "] của mảng"
+    }
+
+    function reverse() {
+        a.reverse()
+        document.getElementById('display').innerText = "["+a+"]";
+    }
+</script>
+</body>
+</html>

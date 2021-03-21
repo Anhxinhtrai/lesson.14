@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra ký tự số</title>
+</head>
+<body>
+<input type="text" id="value" oninput="check()"><br>
+<p id="noti"></p>
+
+<script>
+    function check() {
+        let x = document.getElementById("value").value;
+        if (isNaN(x)) {
+            document.getElementById('noti').innerHTML = "<font color='red'><b>Không hợp lệ !!</b></font>"
+        } else if (x === '') {
+            document.getElementById('noti').innerHTML = "Nhập dãy số của bạn."
+        } else {
+            document.getElementById('noti').innerHTML = "<font color='#00ff7f'><b>Hợp lệ </b></font>"
+        }
+    }
+</script>
+</body>
+</html>

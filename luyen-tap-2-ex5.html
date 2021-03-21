@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra 3 số </title>
+</head>
+<body>
+<script>
+    function soSanh(){
+        let a = prompt("nhập số nguyên 1");
+        let b = prompt("nhập số nguyên 2");
+        let c = prompt("nhập số nguyên 3");
+        if (a < b && a < c){
+            alert("số " + a + "nhỏ nhất");
+        }else if (b < c){
+            alert("số " + b + " nhỏ nhất");
+        }else {alert("số" + c + " nhỏ nhất")};
+    }
+    soSanh();
+</script>
+</body>
+</html>

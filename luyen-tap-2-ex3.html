@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm tính giai thừa</title>
+</head>
+<body>
+<input type="number" id="num" oninput="count(this.value)">
+<p>Kết quả: <span id="result">0</span></p>
+<script>
+    function count(n) {
+        let kq = 1;
+        for (let i = parseInt(n); i >= 1; i--) {
+            kq = kq * i;
+            document.getElementById('result').innerHTML = kq;
+        }
+    }
+</script>
+</body>
+</script>
+</html>

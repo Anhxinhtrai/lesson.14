@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích và chu vi hình tròn</title>
+</head>
+<body>
+<label for="r">Nhập vào bán kính hình tròn</label>
+<input type="number" id="r" oninput="acreage(),perimeter()" min="0">
+<p>Diện tích : <span id="acreage"></span></p>
+<p>Chu vi : <span id="perimeter"></span></p>
+<script>
+
+    function acreage() {
+        let r = document.getElementById('r').value;
+        let s = 3.14159 * r ** 2;
+        document.getElementById('acreage').innerHTML = s;
+    }
+
+    function perimeter() {
+        let r = document.getElementById('r').value;
+        let c = 3.14159 * r * 2;
+        document.getElementById('perimeter').innerText = c;
+    }
+</script>
+</body>
+</html>
